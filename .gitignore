@@ -1,0 +1,7 @@
+.idea/*
+build/*
+test_tools.egg-info/*
+temp/*
+setup.cfg
+*.pyc
+*.pyo
