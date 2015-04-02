@@ -68,7 +68,9 @@ class FixtureManager(object):
         elif fixture_file is not None:
             if file_ext:
                 fixture_file += '.' + file_ext
-            with open(self.get_fixture_path(fixture_file, current_file), 'r') as fp:
+
+            fixture_path = self.get_fixture_path(fixture_file, current_file)
+            with open(fixture_path, 'r', encoding='utf-8') as fp:
                 self.fixture_data = json_load(fp)
         else:
             raise ImportError('Undefined fixture data source')

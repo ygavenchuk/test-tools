@@ -54,7 +54,8 @@ def data_provider(data_set_source):
 
     def test_decorator(fn):
         # next if statement added 'cause MagicMock in python2 raises
-        # AttributeError. See https://code.google.com/p/mock/issues/detail?id=67
+        # AttributeError.
+        # See https://code.google.com/p/mock/issues/detail?id=67
         if not hasattr(fn, '__name__'):
             setattr(fn, '__name__', str(fn))
 
@@ -64,7 +65,8 @@ def data_provider(data_set_source):
             # The next code solves this contradiction
             def _set_up():
                 """
-                Replace local setUp function to the original TestCase's instance
+                Replace local setUp function to the original TestCase's
+                instance
                 """
                 repl._setUp = self.setUp
 
@@ -88,8 +90,8 @@ def data_provider(data_set_source):
                     fn(self, *i)
                     step += 1
                 except AssertionError:
-                    msg_tpl = "Step #{step}. Assertion error caught with data " \
-                              "set {data_set}"
+                    msg_tpl = "Step #{step}. Assertion error caught with " \
+                              "data set {data_set}"
                     print(msg_tpl.format(step=step, data_set=i))
                     raise
 
