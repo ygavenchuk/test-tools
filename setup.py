@@ -50,7 +50,7 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
-        'Topic :: Testing',
+        'Topic :: Software Development :: Testing',
         'Topic :: Software Development :: Libraries',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.2',
