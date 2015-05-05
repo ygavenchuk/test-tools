@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .dp import *
+from tests.dp import *
+from tests.fm import *
 
 __author__ = 'y.gavenchuk'

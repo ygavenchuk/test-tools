@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
+from sys import version_info
 from os.path import join as path_join, abspath, dirname
 from json import load as json_load
 from copy import deepcopy
@@ -23,6 +23,9 @@ from inspect import stack as inspect_stack
 
 __author__ = 'y.gavenchuk aka murminathor'
 __all__ = ['FixtureManager', ]
+
+if version_info[0] == 2:
+    from codecs import open
 
 
 class FixtureManager(object):

@@ -20,6 +20,6 @@ from .fixtureman import FixtureManager
 
 __author__ = 'y.gavenchuk aka murminathor'
 __all__ = ['data_provider', 'FixtureManager', ]
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 VERSION = __version__.split('.')
